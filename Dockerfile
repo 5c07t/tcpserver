@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-RUN apt update
-RUN apt install
-RUN apt install -y netcat
+RUN apt-get update && apt-get install -y netcat
 EXPOSE 9999
 CMD ["nc", "-l", "9999"]
