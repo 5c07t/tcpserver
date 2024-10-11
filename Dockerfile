@@ -1,4 +1,4 @@
-FROM ubuntu:latest
-RUN apt-get update &&  apt install netcat-traditional -y
+FROM python:3.8
+WORKDIR /app
 EXPOSE 9999
-CMD ["nc", "-l", "9999"]
+CMD ["python", "tcpserver.py"]
