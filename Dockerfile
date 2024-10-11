@@ -1,4 +1,4 @@
 FROM ubuntu:latest
-RUN apt-get update &&  apt-get -y dist-upgrade && apt-get -y install netcat
+RUN apt-get update &&  apt install netcat-traditional -y
 EXPOSE 9999
 CMD ["nc", "-l", "9999"]
